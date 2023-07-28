@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <h1 class="fw-bold">Criptoanálisis</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#lista">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="lista">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a href="#principal" class="nav-link">¿Qué es el criptoanálisis?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#fuerza_bruta" class="nav-link">Fuerza bruta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#diccionario" class="nav-link">Diccionario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#colision" class="nav-link">Colisión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="row" id="principal">
+            <div class="col-md-6 text-center">
+                <img src="./imagenes/criptografia.png" alt="criptografia" id="imagen">
+            </div>
+            <div class="col-md-6 text-center my-auto">
+                <h2 class="fw-bold">¿Qué es el criptoanálisis?</h2>
+                <p> Es el estudio y análisis de los sistemas criptográficos con el objetivo de romper su seguridad y
+                    descifrar información sin conocer la clave correcta. Consiste en analizar y utilizar diferentes
+                    métodos, técnicas y herramientas para encontrar vulnerabilidades en los algoritmos de cifrado y
+                    desarrollar ataques que permitan descifrar mensajes o revelar información protegida. Existen varios metodos de criptoanálisis pero a continuación solo veremos tres de ellos.</p>
+            </div>
+        </div>
+        <div class="row flex-row-reverse" id="fuerza_bruta">
+            <div class="col-md-6 text-center">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img src="./imagenes/brute-force-attack.svg" class="d-block w-100" alt="brute_force">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="./imagenes/hydra.svg" class="d-block w-100" alt="hydra">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="./imagenes/jtr.svg" class="d-block w-100" alt="jtr">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 text-center my-auto">
+                <h2 class="fw-bold">Ataque de fuerza bruta</h2>
+                <p>En el contexto del criptoanálisis, se prueban todas las combinaciones posibles de claves una por una
+                    hasta que se encuentra la clave correcta que permite descifrar la información protegida. Este método
+                    asume que el cifrado es sólido y no hay debilidades que permitan acelerar el proceso de descifrado. Para mitigar este riesgo, se utilizan claves criptográficas y complejas que requieren tiempo para probar las combinaciones, ademas de iteraciones y funciones hashes.
+                </p>
+            </div>
+        </div>
+        <div class="row" id="diccionario">
+            <div class="col-md-6 text-center">
+                <img src="./imagenes/diccionario.png" alt="diccionario" id="imagen2">
+            </div>
+            <div class="col-md-6 text-center my-auto">
+                <h2 class="fw-bold">Ataque de diccionario</h2>
+                <p>Método utilizado para descifrar información protegida mediante el uso de un diccionario de palabras o
+                    combinaciones de palabras comunes. Este enfoque se basa en la premisa de que muchas personas
+                    utilizan contraseñas o claves débiles que son fáciles de adivinar. En el criptoanálisis por diccionario, se toma el texto cifrado y se prueban diferentes palabras o cominaciones de estas en el diccionario como posibles claves de cifrado. El objetivo es encontrar una coincidencia entre una palabra del diccionario y la clave utilizada para el cifrado. Es efectivo con contraseñas débiles o basadas en palabras comunes.
+                </p>
+            </div>
+        </div>
+        <div class="row flex-row-reverse" id="colision">
+            <div class="col-md-6 text-center">
+                <img src="./imagenes/colision.png" alt="colision" id="imagen3">
+            </div>
+            <div class="col-md-6 text-center my-auto">
+                <h2 class="fw-bold">Ataque por colisión</h2>
+                <p>Método utilizado para encontrar dos mensajes distintos que generen el mismo valor hash. Se basa en la
+                    premisa de que si dos mensajes diferentes producen el mismo hash, se puede utilizar esta
+                    vulnerabilidad para comprometer la integridad de los sistemas criptográficos basados en funciones
+                    hash. Implica cuestiones graves en la seguridad de los sistemas criptográficos, si se encuentra una colisión en una función hash utilizada para verificar la integridad de un archivo, el atacante puede modificarlo sin cambiar el valor hash y permitiría eludir la detección de cambios no autorizados.
+                </p>
+            </div>
+        </div>
+        <!-- Se queda comentado
+        <div class="social-bar">
+            <a href="https://www.facebook.com/marco.ivan.5201/" class="icon icon-facebook" target="_blank"></a>
+            <a href="https://twitter.com/MarcoIvn14" class="icon icon-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com/iammarcoivan/" class="icon icon-instagram" target="_blank"></a>
+        </div>
+        -->
+    </main>
+    <footer class="bg-dark my-footer">
+        <div class="container">
+            <div class="row text-center">
+                <div class="font-weight-light">
+                    <div>Diplomado en Ciberseguridad</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
